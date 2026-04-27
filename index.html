@@ -174,6 +174,17 @@ section{padding:60px 0}
 .floating-cta{position:fixed;bottom:24px;right:24px;padding:16px 28px;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-2) 100%);color:#0a0805;text-decoration:none;border-radius:12px;font-weight:700;font-size:14px;box-shadow:0 12px 40px rgba(201,151,58,.4);z-index:1000;transition:.2s}
 .floating-cta:hover{transform:translateY(-2px)}
 @media(max-width:768px){.floating-cta{bottom:16px;right:16px;padding:14px 22px;font-size:13px}}
+.results-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:8px}
+.result-card{padding:32px 24px;background:linear-gradient(180deg,rgba(201,151,58,.08) 0%,var(--bg-2) 100%);border:1px solid var(--line-2);border-radius:14px;text-align:center}
+.result-stat{font-size:36px;font-weight:800;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-3) 50%,var(--gold-2) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-family:monospace;letter-spacing:-.02em;margin-bottom:10px;line-height:1.05}
+.result-label{font-size:13px;color:var(--muted);line-height:1.5;letter-spacing:.02em}
+.proof-images{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}
+.proof-figure{margin:0;background:linear-gradient(180deg,var(--surface) 0%,var(--bg-2) 100%);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.proof-figure img{display:block;width:100%;height:auto;border-bottom:1px solid var(--line)}
+.proof-figure figcaption{padding:18px 22px;font-size:13px;color:var(--gold-2);letter-spacing:.04em;text-align:center;font-weight:600}
+.proof-disclaimer{margin-top:24px;padding:16px 22px;border:1px dashed var(--line-2);border-radius:10px;font-size:13px;color:var(--muted);text-align:center;letter-spacing:.02em}
+.proof-disclaimer strong{color:var(--gold-2);text-transform:uppercase;letter-spacing:.12em;font-size:11px}
+@media(max-width:768px){.results-grid{grid-template-columns:1fr 1fr}.proof-images{grid-template-columns:1fr}.result-stat{font-size:28px}}
 .reveal{opacity:0;transform:translateY(30px);transition:.8s}
 .reveal.in{opacity:1;transform:translateY(0)}
 </style>
@@ -182,7 +193,7 @@ section{padding:60px 0}
 <nav>
 <div class="container nav-inner">
 <div class="logo">AG1 Consulting</div>
-<a href="https://calendly.com/andreicopy/15min" class="nav-cta" target="_blank">Book A Call</a>
+<a href="https://calendly.com/ag-copy/call-with-andrei" class="nav-cta" target="_blank">Book A Call</a>
 </div>
 </nav>
 
@@ -199,7 +210,7 @@ section{padding:60px 0}
 </div>
 <div class="hero-cta-row reveal">
 <a href="https://andrei170.github.io/matt-par-mastermind/" target="_blank" class="cta-primary" style="padding:18px 40px;font-size:16px;border-radius:12px;box-shadow:0 12px 40px rgba(201,151,58,.3)">See The Live Demo →</a>
-<a href="https://calendly.com/andreicopy/15min" target="_blank" class="cta-outline">Book A Call</a>
+<a href="https://calendly.com/ag-copy/call-with-andrei" target="_blank" class="cta-outline">Book A Call</a>
 </div>
 </div>
 </section>
@@ -596,6 +607,34 @@ This is <strong>incremental on top of</strong> your existing Accelerator, TubeMa
 </div>
 </section>
 
+<section style="background:linear-gradient(180deg,transparent 0%,rgba(201,151,58,.04) 50%,transparent 100%)">
+<div class="container">
+<div class="eyebrow reveal">Verified Client Results</div>
+<h2 class="reveal">Receipts, Not Headlines</h2>
+<p class="section-sub reveal">One client. Six months. Oct 2025 - Mar 2026. Numbers below pulled from Stripe and revenue-attribution dashboards. Full screenshots below.</p>
+
+<div class="results-grid">
+<div class="result-card reveal"><div class="result-stat">$742K+</div><div class="result-label">Revenue generated, one client, 6 months</div></div>
+<div class="result-card reveal"><div class="result-stat">+101%</div><div class="result-label">Gross volume growth vs. prior period</div></div>
+<div class="result-card reveal"><div class="result-stat">+72%</div><div class="result-label">Total revenue growth vs. prior period</div></div>
+<div class="result-card reveal"><div class="result-stat">$306K</div><div class="result-label">Succeeded payments, single client window</div></div>
+</div>
+
+<div class="proof-images reveal">
+<figure class="proof-figure">
+<img src="proof/stripe-dashboard.png" alt="Stripe dashboard for the client window showing $331K gross volume, +101% period-on-period growth, $306,835.01 succeeded payments">
+<figcaption>Stripe · $331K gross volume · +101% period on period</figcaption>
+</figure>
+<figure class="proof-figure">
+<img src="proof/revenue-dashboard.png" alt="Revenue dashboard showing $742,715.59 total revenue, +72% period-on-period growth, attributed across Search, Campaigns, Social, and Other channels">
+<figcaption>Revenue dashboard · $742,715 total · +72% period on period</figcaption>
+</figure>
+</div>
+
+<div class="proof-disclaimer reveal"><strong>Note</strong> · Client identity withheld under NDA. Live screenshots and source dashboards walked through on the call.</div>
+</div>
+</section>
+
 <section>
 <div class="container-narrow">
 <div class="eyebrow reveal">The Offer</div>
@@ -702,7 +741,7 @@ This is <strong>incremental on top of</strong> your existing Accelerator, TubeMa
 <div class="call-agenda-item"><span class="call-agenda-num">04</span><span class="call-agenda-text">What gets built, what stays in-house with your existing team, and what happens after the 90 days are up.</span></div>
 </div>
 <p style="margin-bottom:36px">The plan above is built around the funnel you already run. The numbers are conservative. The leak points are observable from outside. The only outstanding decision is whether the lift is worth a 20-minute conversation.</p>
-<a href="https://calendly.com/andreicopy/15min" class="cta-primary" target="_blank">Book A Call</a>
+<a href="https://calendly.com/ag-copy/call-with-andrei" class="cta-primary" target="_blank">Book A Call</a>
 <div class="cta-sign">- Andrei | AG1 Consulting</div>
 </div>
 </div>
@@ -714,7 +753,7 @@ This is <strong>incremental on top of</strong> your existing Accelerator, TubeMa
 </div>
 </footer>
 
-<a href="https://calendly.com/andreicopy/15min" target="_blank" class="floating-cta">Book A Call</a>
+<a href="https://calendly.com/ag-copy/call-with-andrei" target="_blank" class="floating-cta">Book A Call</a>
 
 <script>
 const obs=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('in')),{threshold:.1});
